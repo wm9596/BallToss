@@ -14,25 +14,10 @@ public class Box : MonoBehaviour
         ball = FindObjectOfType<Ball>();
     }
 
-    private void Update()
-    {
-        Debug.Log(transform.position);
-    }
-
+    //이미지 타겟이 이미지를 인식하면 공을 활성화 시킴
     public void SetActiveBall(bool flag)
     {
         ball.gameObject.SetActive(flag);
-    }
-
-    public void TargetFound()
-    {
-        //StartCoroutine("Move");
-    }
-
-    public void TargetLost()
-    {
-       // StopCoroutine("Move");
-        transform.localPosition = Vector3.zero;
     }
 
 }
